@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="main_board">Tic Tac Toe Board</string>
+    <string name="top_left">Top Left Side</string>
+    <string name="top_mid">Top Mid Side</string>
+    <string name="top_right">Top Right Side</string>
+    <string name="mid_left">Mid Left Side</string>
+    <string name="mid_mid">Mid Mid Side</string>
+    <string name="mid_right">Mid Right Side</string>
+    <string name="bottom_left">Bottom Left Side</string>
+    <string name="bottom_mid">Bottom Mid Side</string>
+    <string name="bottom_right">Bottom Right Side</string>
+</resources>
