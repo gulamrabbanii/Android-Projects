@@ -14,9 +14,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     // 0 - Cross, 1 - Circle
-    var activePlayer = 0
-    val gameState = arrayListOf(2, 2, 2, 2, 2, 2, 2, 2, 2)
-    val winningPosition = listOf(
+    private var activePlayer = 0
+    private val gameState = arrayListOf(2, 2, 2, 2, 2, 2, 2, 2, 2)
+    private val winningPosition = listOf(
                             listOf(3, 4, 5),
                             listOf(6, 7, 8),
                             listOf(0, 3, 6),
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                             listOf(0, 4, 8),
                             listOf(2, 4, 6)
     )
-    var isGameActive = true
+    private var isGameActive = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,13 +42,13 @@ class MainActivity : AppCompatActivity() {
 
             slotImg.translationY = -2000f
             if (activePlayer == 0) {
-                activePlayer = 1;
+                activePlayer = 1
                 slotImg.setImageResource(R.drawable.tic_tac_toe_x)
             } else {
                 activePlayer = 0
                 slotImg.setImageResource(R.drawable.tic_tac_toe_o)
             }
-            slotImg.animate().translationYBy(2000f).rotation(1800f).setDuration(500)
+            slotImg.animate().translationYBy(2000f).rotation(1800f).duration = 500
             for (combo in winningPosition) {
                 if (gameState[combo[0]] == gameState[combo[1]] &&
                         gameState[combo[1]] == gameState[combo[2]] &&
